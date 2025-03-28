@@ -1,17 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
-import CustomCursor from './components/CustomCursor';
 import './App.css';
 
 function App() {
-  const [isHovering, setIsHovering] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-
-  const handleHoverStart = useCallback(() => setIsHovering(true), []);
-  const handleHoverEnd = useCallback(() => setIsHovering(false), []);
 
   useEffect(() => {
     // loading simulation on web join
@@ -19,31 +14,10 @@ function App() {
       setIsLoading(false);
     }, 800);
 
-    const handleMouseOver = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      if (target.tagName === 'A' || target.tagName === 'BUTTON' || 
-          target.closest('a') || target.closest('button')) {
-        handleHoverStart();
-      }
-    };
-
-    const handleMouseOut = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      if (target.tagName === 'A' || target.tagName === 'BUTTON' || 
-          target.closest('a') || target.closest('button')) {
-        handleHoverEnd();
-      }
-    };
-
-    document.addEventListener('mouseover', handleMouseOver);
-    document.addEventListener('mouseout', handleMouseOut);
-
     return () => {
       clearTimeout(timer);
-      document.removeEventListener('mouseover', handleMouseOver);
-      document.removeEventListener('mouseout', handleMouseOut);
     };
-  }, [handleHoverStart, handleHoverEnd]);
+  }, []);
 
   if (isLoading) {
     return (
@@ -64,7 +38,6 @@ function App() {
     // main router
     <Router>
       <div className="min-h-screen flex flex-col bg-gray-50 text-gray-800 noise-bg">
-        <CustomCursor isHovering={isHovering} />
         <Navbar />
         <main className="flex-grow">
           <Routes>
