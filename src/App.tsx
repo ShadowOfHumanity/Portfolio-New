@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
@@ -35,8 +35,8 @@ function App() {
   }
 
   return (
-    // main router
-    <Router>
+    // main router with basename set to match GitHub Pages path
+    <Router basename="/Portfolio-New">
       <div className="min-h-screen flex flex-col bg-gray-50 text-gray-800 noise-bg">
         <Navbar />
         <main className="flex-grow">
@@ -96,10 +96,10 @@ function App() {
                 <div>
                   <h4 className="text-white font-semibold mb-4 text-lg">Navigation</h4>
                   <ul className="space-y-2">
-                    <li><a href="/" className="text-primary-200 hover:text-white transition-colors">Home</a></li>
-                    <li><a href="/projects" className="text-primary-200 hover:text-white transition-colors">Projects</a></li>
-                    <li><a href="/#skills" className="text-primary-200 hover:text-white transition-colors">Skills</a></li>
-                    <li><a href="/#contact" className="text-primary-200 hover:text-white transition-colors">Contact</a></li>
+                    <li><Link to="/" className="text-primary-200 hover:text-white transition-colors">Home</Link></li>
+                    <li><Link to="/projects" className="text-primary-200 hover:text-white transition-colors">Projects</Link></li>
+                    <li><a href="#skills" className="text-primary-200 hover:text-white transition-colors">Skills</a></li>
+                    <li><a href="#contact" className="text-primary-200 hover:text-white transition-colors">Contact</a></li>
                   </ul>
                 </div>
                 

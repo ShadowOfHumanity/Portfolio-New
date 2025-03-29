@@ -72,32 +72,28 @@ const Navbar = () => {
               )}
             </Link>
             
-            <a 
-              href="https://github.com/ShadowOfHumanity?tab=repositories" 
-              target="_blank" 
-              rel="noopener noreferrer"
+            <Link 
+              to="/github" 
               className="relative px-1 py-2 group text-gray-600 hover:text-primary-600 transition-colors"
             >
               <span className="relative z-10">GitHub</span>
               <span className="absolute bottom-0 left-0 w-0 h-[3px] bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full group-hover:w-full transition-all duration-300"></span>
-            </a>
+            </Link>
             
-            <a 
-              href="https://www.linkedin.com/in/darian-baker-1402b2327/" 
-              target="_blank" 
-              rel="noopener noreferrer"
+            <Link 
+              to="/linkedin" 
               className="relative px-1 py-2 group text-gray-600 hover:text-primary-600 transition-colors"
             >
               <span className="relative z-10">LinkedIn</span>
               <span className="absolute bottom-0 left-0 w-0 h-[3px] bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full group-hover:w-full transition-all duration-300"></span>
-            </a>
+            </Link>
             
-            <a 
-              href="mailto:darianbakerbray@gmail.com"
+            <Link 
+              to="/contact" 
               className="px-5 py-2 rounded-full bg-gradient-to-r from-primary-500 to-secondary-600 text-white font-medium hover:shadow-lg hover:shadow-primary-500/20 transition-all duration-300 hover:-translate-y-0.5"
             >
               Contact Me
-            </a>
+            </Link>
           </div>
           
           {/* Mobile menu button */}
@@ -135,31 +131,27 @@ const Navbar = () => {
               >
                 Projects
               </Link>
-              <a 
-                href="https://github.com/ShadowOfHumanity?tab=repositories" 
-                target="_blank" 
-                rel="noopener noreferrer"
+              <Link 
+                to="/github" 
                 className="text-gray-700 py-3 px-3 rounded-lg hover:bg-white/10"
                 onClick={() => setIsMenuOpen(false)}
               >
                 GitHub
-              </a>
-              <a 
-                href="https://www.linkedin.com/in/darian-baker-1402b2327/" 
-                target="_blank" 
-                rel="noopener noreferrer"
+              </Link>
+              <Link 
+                to="/linkedin" 
                 className="text-gray-700 py-3 px-3 rounded-lg hover:bg-white/10"
                 onClick={() => setIsMenuOpen(false)}
               >
                 LinkedIn
-              </a>
-              <a 
-                href="mailto:darianbakerbray@gmail.com"
+              </Link>
+              <Link 
+                to="/contact"
                 className="mt-2 py-3 text-center rounded-lg bg-gradient-to-r from-primary-500 to-secondary-600 text-white font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact Me
-              </a>
+              </Link>
             </div>
           </div>
         )}
