@@ -73,7 +73,7 @@ const Navbar = () => {
             </Link>
             
             <Link 
-              to="/github" 
+              to="https://github.com/ShadowOfHumanity" 
               className="relative px-1 py-2 group text-gray-600 hover:text-primary-600 transition-colors"
             >
               <span className="relative z-10">GitHub</span>
@@ -81,7 +81,7 @@ const Navbar = () => {
             </Link>
             
             <Link 
-              to="/linkedin" 
+              to="https://www.linkedin.com/in/darian-baker-1402b2327/" 
               className="relative px-1 py-2 group text-gray-600 hover:text-primary-600 transition-colors"
             >
               <span className="relative z-10">LinkedIn</span>
