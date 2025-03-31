@@ -35,8 +35,8 @@ function App() {
   }
 
   return (
-    // main router with basename set to match GitHub Pages path
-    <Router basename="/Portfolio-New">
+    // main router with basename set to match domain
+    <Router basename="/">
       <div className="min-h-screen flex flex-col bg-gray-50 text-gray-800 noise-bg">
         <Navbar />
         <main className="flex-grow">
