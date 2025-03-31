@@ -1,6 +1,6 @@
 {
   "name": "dariportfolio",
-  "homepage": "https://darianbaker.eu",
+  "homepage": "https://darianbaker.eu/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist --no-history"
+    "deploy": "node deploy.js"
   },
   "dependencies": {
     "gh-pages": "^6.3.0",
