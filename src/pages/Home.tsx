@@ -297,7 +297,7 @@ const Home = () => {
                 <Briefcase className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-2 text-gray-800 group-hover:text-indigo-600 transition-colors">Available for Work</h3>
-              <p className="text-gray-600 font-medium text-sm">Open to full-time positions and freelance projects</p>
+              <p className="text-gray-600 font-medium text-sm">Open to full-time, part-time and internship positions</p>
               <div className="mt-3 w-12 h-0.5 bg-gradient-to-r from-indigo-300 to-violet-300 rounded-full"></div>
               <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-indigo-50 rounded-full opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
             </div>
