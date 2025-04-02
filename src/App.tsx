@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
+import Resume from './assets/Darian-Cv.pdf'
 import './App.css';
 
 function App() {
@@ -98,7 +99,6 @@ function App() {
                   <ul className="space-y-2">
                     <li><Link to="/" className="text-primary-200 hover:text-white transition-colors">Home</Link></li>
                     <li><Link to="/projects" className="text-primary-200 hover:text-white transition-colors">Projects</Link></li>
-                    <li><a href="#skills" className="text-primary-200 hover:text-white transition-colors">Skills</a></li>
                     <li><a href="#contact" className="text-primary-200 hover:text-white transition-colors">Contact</a></li>
                   </ul>
                 </div>
@@ -106,7 +106,7 @@ function App() {
                 <div>
                   <h4 className="text-white font-semibold mb-4 text-lg">Resources</h4>
                   <ul className="space-y-2">
-                    <li><a href="/resume.pdf" className="text-primary-200 hover:text-white transition-colors">Resume</a></li>
+                    <li><a href={Resume} className="text-primary-200 hover:text-white transition-colors">Resume</a></li>
                     <li><a href="https://github.com/ShadowOfHumanity?tab=repositories" className="text-primary-200 hover:text-white transition-colors">GitHub</a></li>
                     <li><a href="https://www.linkedin.com/in/darian-baker-1402b2327/" className="text-primary-200 hover:text-white transition-colors">LinkedIn</a></li>
                   </ul>
